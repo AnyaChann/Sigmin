@@ -10,6 +10,9 @@ export const UserList = (props: ListProps) => (
       <NumberField source="id" />
       <TextField source="name" />
       <TextField source="email" />
+      <EditButton />
+      <ShowButton />
+      <DeleteButton />
     </Datagrid>
   </List>
 );
@@ -20,6 +23,9 @@ export const UserEdit = (props: EditProps) => (
       <NumberInput source="id" />
       <TextInput source="name" />
       <TextInput source="email" />
+      <EditButton />
+      <ShowButton />
+      <DeleteButton />
     </SimpleForm>
   </Edit>
 );
@@ -30,6 +36,9 @@ export const UserShow = (props: ShowProps) => (
       <NumberField source="id" />
       <TextField source="name" />
       <TextField source="email" />
+      <EditButton />
+      <ShowButton />
+      <DeleteButton />
     </SimpleShowLayout>
   </Show>
 );

@@ -3,10 +3,10 @@ import { Layout } from './Layout';
 import { dataProvider } from './dataProvider';
 import { authProvider } from './authProvider';
 
-import { ProductList, ProductEdit, ProductShow } from './products';
-import { ProductReviewList, ProductReviewEdit, ProductReviewShow } from './productReview';
-import { CategoryList, CategoryEdit, CategoryShow } from './categories';
-import { UserList, UserEdit, UserShow } from './users';
+import { ProductList, ProductEdit, ProductShow } from './components/products';
+import { ProductReviewList, ProductReviewEdit, ProductReviewShow } from './components/productReview';
+import { CategoryList, CategoryEdit, CategoryShow } from './components/categories';
+import { UserList, UserEdit, UserShow } from './components/users';
 
 export const App = () => (
   <Admin
