@@ -1,39 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import { useDataProvider, useNotify, useRefresh } from 'react-admin';
+import { useDataProvider, useNotify } from 'react-admin';
 
 const Profile: React.FC = () => {
   const dataProvider = useDataProvider();
   const notify = useNotify();
-  const refresh = useRefresh();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const { data } = await dataProvider.getOne('users', { id: 'me' });
+        const { data } = await dataProvider.getOne('admins', { id: 'me' });
         setUser(data);
-        setLoading(false);
       } catch (error) {
         notify('Error fetching user data', { type: 'warning' });
+      } finally {
         setLoading(false);
       }
     };
-
+  
     fetchUser();
   }, [dataProvider, notify]);
-
+  
   const handleSave = async () => {
+    if (!user) {
+      notify('User data is not loaded', { type: 'warning' });
+      return;
+    }
+  
     try {
-      await dataProvider.update('users', {
+      await dataProvider.update('admins', {
         id: user.id,
         data: user,
         previousData: undefined
       });
-      notify('Profile updated successfully', { type: 'info' });
-      refresh();
     } catch (error) {
-      notify('Error updating profile', { type: 'warning' });
+      notify('Error saving user data', { type: 'warning' });
     }
   };
 

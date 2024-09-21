@@ -9,7 +9,7 @@ export const ProductReviewList = (props: ListProps) => (
       <NumberField source="id" />
       <TextField source="comment" />
       <NumberField source="product_id" />
-      <ReferenceField source="user_id" reference="users">
+      <ReferenceField source="user_id" reference="customers">
         <TextField source="name" />
       </ReferenceField>
       <EditButton />
@@ -24,7 +24,7 @@ export const ProductReviewEdit = (props: EditProps) => (
       <NumberInput source="id" disabled />
       <TextInput source="comment" />
       <NumberInput source="product_id" />
-      <ReferenceInput source="user_id" reference="users">
+      <ReferenceInput source="user_id" reference="customers">
         <SelectInput optionText="name" />
       </ReferenceInput>
     </SimpleForm>
@@ -37,7 +37,7 @@ export const ProductReviewShow = (props: ShowProps) => (
       <NumberField source="id" />
       <TextField source="comment" />
       <NumberField source="product_id" />
-      <ReferenceField source="user_id" reference="users">
+      <ReferenceField source="user_id" reference="customers">
         <TextField source="name" />
       </ReferenceField>
     </SimpleShowLayout>

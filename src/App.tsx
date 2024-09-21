@@ -1,6 +1,6 @@
 import React from 'react';
-import { Admin, Resource, CustomRoutes } from 'react-admin';
-import { Layout } from './Layout';
+import { Admin, Resource, CustomRoutes, Layout } from 'react-admin';
+// import { Route } from 'react-router-dom';
 import { dataProvider } from './dataProvider';
 import authProvider from './authProvider';
 import customRoutes from './components/customRoutes';
@@ -11,15 +11,24 @@ import { CategoryList, CategoryEdit, CategoryShow } from './components/categorie
 import { CustomerList, CustomerEdit, CustomerShow } from './components/customers';
 import { DesignerList, DesignerEdit, DesignerShow } from './components/designers';
 import { OrderList, OrderEdit, OrderShow } from './components/orders';
-// import { Profile } from './components/profile';
+// import Profile from './components/profile';
 import { AdminList, AdminEdit, AdminShow, AdminCreate } from './components/owner/admins';
 // import { LogList, LogShow } from './components/owner/logs';
+
+import ProductsIcon from '@mui/icons-material/Store';
+import ProductReviewIcon from '@mui/icons-material/RateReview';
+import CategoryIcon from '@mui/icons-material/Category';
+import CustomerIcon from '@mui/icons-material/People';
+import DesignerIcon from '@mui/icons-material/Brush';
+import OrderIcon from '@mui/icons-material/ShoppingCart';
+import AdminIcon from '@mui/icons-material/SupervisorAccount';
+// import ProfileIcon from '@mui/icons-material/AccountCircle';
 
 const App: React.FC = () => (
   <Admin
     layout={Layout}
-    dataProvider={dataProvider}
     authProvider={authProvider}
+    dataProvider={dataProvider}
   >
     {permissions => [
       <Resource
@@ -28,6 +37,7 @@ const App: React.FC = () => (
         list={ProductList}
         edit={ProductEdit}
         show={ProductShow}
+        icon={ProductsIcon}
       />,
       <Resource
         key="productReview"
@@ -35,6 +45,7 @@ const App: React.FC = () => (
         list={ProductReviewList}
         edit={ProductReviewEdit}
         show={ProductReviewShow}
+        icon={ProductReviewIcon}
       />,
       <Resource
         key="categories"
@@ -42,6 +53,7 @@ const App: React.FC = () => (
         list={CategoryList}
         edit={CategoryEdit}
         show={CategoryShow}
+        icon={CategoryIcon}
       />,
       // permissions === 'Owner' && (
       //   <Resource
@@ -58,6 +70,7 @@ const App: React.FC = () => (
           edit={AdminEdit}
           show={AdminShow}
           create={AdminCreate}
+          icon={AdminIcon}
         />
       ),
       <Resource
@@ -66,6 +79,7 @@ const App: React.FC = () => (
         list={CustomerList}
         edit={CustomerEdit}
         show={CustomerShow}
+        icon={CustomerIcon}
       />,
       <Resource
         key="designers"
@@ -73,6 +87,7 @@ const App: React.FC = () => (
         list={DesignerList}
         edit={DesignerEdit}
         show={DesignerShow}
+        icon={DesignerIcon}
       />,
       <Resource
         key="orders"
@@ -80,12 +95,13 @@ const App: React.FC = () => (
         list={OrderList}
         edit={OrderEdit}
         show={OrderShow}
+        icon={OrderIcon}
       />
     ]}
-    <CustomRoutes>
-      {customRoutes}
-    </CustomRoutes>
-  </Admin>
+  <CustomRoutes>
+    {customRoutes}
+  </CustomRoutes>
+</Admin>
 );
 
 export default App;
