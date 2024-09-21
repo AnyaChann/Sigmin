@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, NumberField, EditButton, ShowButton, DeleteButton } from 'react-admin';
+import { List, Datagrid, TextField, NumberField, EditButton, DeleteButton } from 'react-admin';
 import { Edit, SimpleForm, TextInput, NumberInput } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import { ListProps, ShowProps, EditProps } from 'react-admin';
@@ -11,7 +11,6 @@ export const CustomerList = (props: ListProps) => (
       <TextField source="name" />
       <TextField source="email" />
       <EditButton />
-      <ShowButton />
       <DeleteButton />
     </Datagrid>
   </List>
@@ -24,7 +23,6 @@ export const CustomerEdit = (props: EditProps) => (
       <TextInput source="name" />
       <TextInput source="email" />
       <EditButton />
-      <ShowButton />
       <DeleteButton />
     </SimpleForm>
   </Edit>
@@ -37,7 +35,6 @@ export const CustomerShow = (props: ShowProps) => (
       <TextField source="name" />
       <TextField source="email" />
       <EditButton />
-      <ShowButton />
       <DeleteButton />
     </SimpleShowLayout>
   </Show>

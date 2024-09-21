@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, NumberField, EditButton, ShowButton, DeleteButton } from 'react-admin';
+import { List, Datagrid, TextField, NumberField, EditButton, DeleteButton } from 'react-admin';
 import { Edit, SimpleForm, TextInput, NumberInput } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import { ShowProps, EditProps, ListProps } from 'react-admin';
@@ -11,7 +11,6 @@ export const ProductList = (props: ListProps) => (
       <NumberField source="price" />
       <TextField source="category" />
       <EditButton />
-      <ShowButton />
       <DeleteButton />
     </Datagrid>
   </List>

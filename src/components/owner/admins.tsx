@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, Datagrid, TextField, NumberField, EditButton, ShowButton, DeleteButton } from 'react-admin';
-import { Edit, SimpleForm, TextInput, NumberInput, Create, ImageInput, ImageField, Accept } from 'react-admin';
+import { Edit, SimpleForm, TextInput, NumberInput, Create, ImageInput, ImageField } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import { ListProps, ShowProps, EditProps, CreateProps } from 'react-admin';
 
@@ -25,7 +25,7 @@ export const AdminEdit: React.FC<EditProps> = (props) => (
       <TextInput source="username" />
       <TextInput source="password" />
       <TextInput source="fullName" />
-      <ImageInput source="avatar" label="Avatar" accept={"image/*" as Accept}>
+      <ImageInput source="avatar" label="Avatar">
         <ImageField source="src" title="title" />
       </ImageInput>
     </SimpleForm>
@@ -49,7 +49,7 @@ export const AdminCreate: React.FC<CreateProps> = (props) => (
       <TextInput source="username" />
       <TextInput source="password" />
       <TextInput source="fullName" />
-      <ImageInput source="avatar" label="Avatar" accept={"image/*" as Accept}>
+      <ImageInput source="avatar" label="Avatar">
         <ImageField source="src" title="title" />
       </ImageInput>
     </SimpleForm>
