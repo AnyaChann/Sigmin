@@ -1,0 +1,58 @@
+{
+  "users": [
+    { "id": 1, "name": "Alice", "email": "alice@example.com" },
+    { "id": 2, "name": "Bob", "email": "bob@example.com" },
+    { "id": 3, "name": "Charlie", "email": "charlie@example.com" },
+    { "id": 4, "name": "David", "email": "david@example.com" },
+    { "id": 5, "name": "Eve", "email": "eve@example.com" },
+    { "id": 6, "name": "Frank", "email": "frank@example.com" },
+    { "id": 7, "name": "Grace", "email": "grace@example.com" },
+    { "id": 8, "name": "Hank", "email": "hank@example.com" },
+    { "id": 9, "name": "Ivy", "email": "ivy@example.com" },
+    { "id": 10, "name": "Jack", "email": "jack@example.com" },
+    { "id": 11, "name": "Kathy", "email": "kathy@example.com" },
+    { "id": 12, "name": "Leo", "email": "leo@example.com" }
+  ],
+  "categories": [
+    { "id": 1, "category_name": "Furniture" },
+    { "id": 2, "category_name": "Lighting" },
+    { "id": 3, "category_name": "Wall Art" },
+    { "id": 4, "category_name": "Rugs" },
+    { "id": 5, "category_name": "Curtains" },
+    { "id": 6, "category_name": "Cushions" },
+    { "id": 7, "category_name": "Mirrors" },
+    { "id": 8, "category_name": "Vases" },
+    { "id": 9, "category_name": "Candles" },
+    { "id": 10, "category_name": "Clocks" },
+    { "id": 11, "category_name": "Shelves" },
+    { "id": 12, "category_name": "Planters" }
+  ],
+  "product Review": [
+    { "id": 1, "comment": "Beautiful design!", "product_id": 1, "user_id": 1 },
+    { "id": 2, "comment": "Very stylish", "product_id": 2, "user_id": 2 },
+    { "id": 3, "comment": "Excellent quality", "product_id": 3, "user_id": 3 },
+    { "id": 4, "comment": "Looks great", "product_id": 4, "user_id": 4 },
+    { "id": 5, "comment": "Highly recommend", "product_id": 5, "user_id": 5 },
+    { "id": 6, "comment": "Very elegant", "product_id": 6, "user_id": 6 },
+    { "id": 7, "comment": "Perfect for my living room", "product_id": 7, "user_id": 7 },
+    { "id": 8, "comment": "Adds a nice touch", "product_id": 8, "user_id": 8 },
+    { "id": 9, "comment": "Great value", "product_id": 9, "user_id": 9 },
+    { "id": 10, "comment": "Love it", "product_id": 10, "user_id": 10 },
+    { "id": 11, "comment": "Very modern", "product_id": 11, "user_id": 11 },
+    { "id": 12, "comment": "Five stars", "product_id": 12, "user_id": 12 }
+  ],
+  "products": [
+    { "id": 1, "name": "Sofa", "price": 499.99, "category": "Furniture" },
+    { "id": 2, "name": "Chandelier", "price": 199.99, "category": "Lighting" },
+    { "id": 3, "name": "Abstract Painting", "price": 149.99, "category": "Wall Art" },
+    { "id": 4, "name": "Persian Rug", "price": 299.99, "category": "Rugs" },
+    { "id": 5, "name": "Velvet Curtains", "price": 99.99, "category": "Curtains" },
+    { "id": 6, "name": "Decorative Cushions", "price": 29.99, "category": "Cushions" },
+    { "id": 7, "name": "Wall Mirror", "price": 89.99, "category": "Mirrors" },
+    { "id": 8, "name": "Ceramic Vase", "price": 39.99, "category": "Vases" },
+    { "id": 9, "name": "Scented Candles", "price": 19.99, "category": "Candles" },
+    { "id": 10, "name": "Wall Clock", "price": 49.99, "category": "Clocks" },
+    { "id": 11, "name": "Floating Shelves", "price": 59.99, "category": "Shelves" },
+    { "id": 12, "name": "Indoor Planter", "price": 24.99, "category": "Planters" }
+  ]
+}
