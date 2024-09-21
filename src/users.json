@@ -5,14 +5,16 @@
       "username": "BachTo",
       "password": "123456789",
       "fullName": "To Bach",
-      "avatar": "./assets/img/socVang.jpg"
+      "avatar": "./assets/img/socVang.jpg",
+      "role": "Owner"
     },
     {
       "id": 2,
       "username": "Quyen",
       "password": "12345678",
       "fullName": "Ngoc Quyen",
-      "avatar": "./assets/img/caVang.jpg"
+      "avatar": "./assets/img/caVang.jpg",
+      "role": "Admin"
     }
   ]
 }

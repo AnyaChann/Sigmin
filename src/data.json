@@ -1,5 +1,5 @@
 {
-  "users": [
+  "customers": [
     { "id": 1, "name": "Alice", "email": "alice@example.com" },
     { "id": 2, "name": "Bob", "email": "bob@example.com" },
     { "id": 3, "name": "Charlie", "email": "charlie@example.com" },
@@ -54,5 +54,33 @@
     { "id": 10, "name": "Wall Clock", "price": 49.99, "category": "Clocks" },
     { "id": 11, "name": "Floating Shelves", "price": 59.99, "category": "Shelves" },
     { "id": 12, "name": "Indoor Planter", "price": 24.99, "category": "Planters" }
+  ],
+  "orders": [
+    { "id": 1, "customer": "Alice", "product": "Sofa", "quantity": 1, "status": "Delivered" },
+    { "id": 2, "customer": "Bob", "product": "Chandelier", "quantity": 2, "status": "Pending" },
+    { "id": 3, "customer": "Charlie", "product": "Abstract Painting", "quantity": 1, "status": "Shipped" },
+    { "id": 4, "customer": "David", "product": "Persian Rug", "quantity": 3, "status": "Delivered" },
+    { "id": 5, "customer": "Eve", "product": "Velvet Curtains", "quantity": 4, "status": "Cancelled" },
+    { "id": 6, "customer": "Frank", "product": "Decorative Cushions", "quantity": 5, "status": "Pending" },
+    { "id": 7, "customer": "Grace", "product": "Wall Mirror", "quantity": 1, "status": "Delivered" },
+    { "id": 8, "customer": "Hank", "product": "Ceramic Vase", "quantity": 2, "status": "Shipped" },
+    { "id": 9, "customer": "Ivy", "product": "Scented Candles", "quantity": 6, "status": "Delivered" },
+    { "id": 10, "customer": "Jack", "product": "Wall Clock", "quantity": 1, "status": "Pending" },
+    { "id": 11, "customer": "Kathy", "product": "Floating Shelves", "quantity": 2, "status": "Shipped" },
+    { "id": 12, "customer": "Leo", "product": "Indoor Planter", "quantity": 3, "status": "Delivered" }
+  ],
+  "designers": [
+    { "id": 1, "name": "Designer A", "specialty": "Furniture" },
+    { "id": 2, "name": "Designer B", "specialty": "Lighting" },
+    { "id": 3, "name": "Designer C", "specialty": "Wall Art" },
+    { "id": 4, "name": "Designer D", "specialty": "Rugs" },
+    { "id": 5, "name": "Designer E", "specialty": "Curtains" },
+    { "id": 6, "name": "Designer F", "specialty": "Cushions" },
+    { "id": 7, "name": "Designer G", "specialty": "Mirrors" },
+    { "id": 8, "name": "Designer H", "specialty": "Vases" },
+    { "id": 9, "name": "Designer I", "specialty": "Candles" },
+    { "id": 10, "name": "Designer J", "specialty": "Clocks" },
+    { "id": 11, "name": "Designer K", "specialty": "Shelves" },
+    { "id": 12, "name": "Designer L", "specialty": "Planters" }
   ]
 }

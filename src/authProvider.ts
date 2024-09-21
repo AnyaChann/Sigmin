@@ -4,6 +4,7 @@ import data from "./users.json";
 /**
  * This authProvider is only for test purposes. Don't use it in production.
  */
+
 export const authProvider: AuthProvider = {
   login: ({ username, password }) => {
     const user = data.users.find(
@@ -17,28 +18,27 @@ export const authProvider: AuthProvider = {
       return Promise.resolve();
     }
 
-    return Promise.reject(
-      new HttpError("Unauthorized", 401, {
-        message: "Invalid username or password",
-      }),
-    );
+    return Promise.reject(new HttpError('Invalid username or password', 401));
+  },
+  checkAuth: () => {
+    return localStorage.getItem("user") ? Promise.resolve() : Promise.reject();
   },
   logout: () => {
     localStorage.removeItem("user");
     return Promise.resolve();
   },
-  checkError: () => Promise.resolve(),
-  checkAuth: () =>
-    localStorage.getItem("user") ? Promise.resolve() : Promise.reject(),
+  checkError: (error) => {
+    const status = error.status;
+    if (status === 401 || status === 403) {
+      localStorage.removeItem("user");
+      return Promise.reject();
+    }
+    return Promise.resolve();
+  },
   getPermissions: () => {
-    return Promise.resolve(undefined);
-  },
-  getIdentity: () => {
-    const persistedUser = localStorage.getItem("user");
-    const user = persistedUser ? JSON.parse(persistedUser) : null;
-
-    return Promise.resolve(user);
-  },
+    const user = JSON.parse(localStorage.getItem("user") || '{}');
+    return user.role ? Promise.resolve(user.role) : Promise.reject();
+  }
 };
 
 export default authProvider;
